@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congruencia lineal</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .menu {
+            ul {
+                list-style: none;
+            }
+        }
+    </style>
+</head>
+
+<body id="all">
+
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Cuadrado Medio</a></li>
+                <li><a href="./productomedio.html">Producto Medio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <form id="form_square_medio">
+        <label for="">X(n) para método de congruencia lineal</label>
+        <input type="text" name="rn" id="rn" placeholder="Ejemplo: 7">
+        <label for="">a (multiplicador) [a>0]: </label>
+        <input type="text" name="a" id="a" placeholder="Ejemplo: 1">
+        <label for="">C (constante aditiva) [c>0]</label>
+        <input type="text" name="c" id="c" placeholder="Ejemplo: 7">
+        <label for="">m (módulo) [m>X0, m>a y m>c]</label>
+        <input type="text" name="m" id="m" placeholder="Ejemplo: 13">
+        <button type="submit" id="submit">Enviar datos</button>
+    </form>
+
+    <div id="square"></div>
+
+    <table id="tabla">
+        <!-- <tr>
+            <th id="index">
+                n
+            </th>
+            <th id="index">
+                R(n)
+            </th>
+            <th id="index">
+                R(n)^2
+            </th>
+            <th id="index">
+                M.R(n)^2
+            </th>
+            <th id="index">
+                Val Izq
+            </th>
+        </tr> -->
+
+    </table>
+
+    <script src="congruencialineal.js"></script>
+
+</body>
+
+</html>

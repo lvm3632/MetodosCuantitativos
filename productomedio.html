@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto medio</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .menu {
+            ul {
+                list-style: none;
+            }
+        }
+    </style>
+</head>
+
+<body id="all">
+
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Cuadrado Medio</a></li>
+                <li><a href="./index.html">Congruencia lineal</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <form id="form_square_medio">
+        <label for="">R(n) para método del producto medio</label>
+        <input type="text" name="rn" id="rn" placeholder="Ejemplo: 151">
+        <button type="submit" id="submit">Enviar datos</button>
+    </form>
+
+    <div id="square"></div>
+
+    <table id="tabla">
+        <!-- <tr>
+            <th id="index">
+                n
+            </th>
+            <th id="index">
+                R(n)
+            </th>
+            <th id="index">
+                R(n)^2
+            </th>
+            <th id="index">
+                M.R(n)^2
+            </th>
+            <th id="index">
+                Val Izq
+            </th>
+        </tr> -->
+
+    </table>
+
+    <script src="productomedio.js"></script>
+
+</body>
+
+</html>
