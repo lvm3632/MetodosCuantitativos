@@ -12,7 +12,7 @@ window.onload = () => {
         output.innerHTML = "<b>Método de congruencia lineal</b> <br/>\nSemilla: " + semilla;
         e.preventDefault();
         let arr = generarNumeros(semilla, a, c, m);
-        genera_tabla(15, arr);
+        genera_tabla(999, arr);
     };
 };
 
@@ -29,16 +29,16 @@ function generarNumeros(sem, a, c, m) {
 
     let num1_before = 0;
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 1000; i++) {
         num1_before = semilla;
         totalSuma = aV*semilla+cV;
         modTotal = totalSuma % mV;
         semilla = modTotal;
         let obj = {
             index: i,
-            xn: normalize(num1_before),
-            axc: normalize(totalSuma),
-            axcmodm: normalize(modTotal)
+            xn: num1_before,//normalize(num1_before),
+            axc: totalSuma, //normalize(totalSuma),
+            axcmodm: modTotal //normalize(modTotal)
         };
         arr.push(obj);
         console.log(obj);
@@ -46,11 +46,11 @@ function generarNumeros(sem, a, c, m) {
     return arr;
 }
 
-function normalize(value, min = 0, max = Math.pow(2,32)){
+/*function normalize(value, min = 0, max = Math.pow(2,32)){
         normalized = (value-min)/(max-min);
         let res =  normalized*100000000;
         return res.toFixed(2);
-}
+}*/
 
 function genera_tabla(n, arr) {
     tabla.innerText = "";
