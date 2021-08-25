@@ -36,14 +36,20 @@ function generarNumeros(sem, a, c, m) {
         semilla = modTotal;
         let obj = {
             index: i,
-            xn: num1_before,
-            axc: totalSuma,
-            axcmodm: modTotal
+            xn: normalize(num1_before),
+            axc: normalize(totalSuma),
+            axcmodm: normalize(modTotal)
         };
         arr.push(obj);
         console.log(obj);
     }
     return arr;
+}
+
+function normalize(value, min = 0, max = Math.pow(2,32)){
+        normalized = (value-min)/(max-min);
+        let res =  normalized*100000000;
+        return res.toFixed(2);
 }
 
 function genera_tabla(n, arr) {
